@@ -1,0 +1,9 @@
+.idea
+vendor
+.editorconfig
+**/.DS_Store
+src/bootstrap/cache/*.php
+src/.env*
+!src/.env.example
+src/.phpunit.result.cache
+resources

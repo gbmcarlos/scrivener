@@ -1,0 +1,9 @@
+.idea
+.git
+vendor
+.editorconfig
+.DS_Store
+src/app/bootstrap/cache
+src/storage/framework/cache/*
+src/storage/framework/sessions/*
+src/storage/framework/views/*
