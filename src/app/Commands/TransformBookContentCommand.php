@@ -2,18 +2,40 @@
 
 namespace App\Commands;
 
+use App\Services\FB2Extractor;
 use Illuminate\Console\Command;
 
 class TransformBookContentCommand extends Command {
 
-    protected $signature = "transform-book-content {libraryFolder} {bookFile} {outputFolder}";
+    public function __construct(FB2Extractor $fb2Extractor) {
+        parent::__construct();
+        $this->fb2Extractor = $fb2Extractor;
+    }
+
+    protected FB2Extractor $fb2Extractor;
+
+    protected $signature = "transform-book-content {bookFile} {outputPath}";
 
     public function handle() {
 
-        $this->line("Library folder: " . $this->argument("libraryFolder"));
-        $this->line("Book file: " . $this->argument("bookFile"));
-        $this->line("Output folder: " . $this->argument("outputFolder"));
-        $this->line("Current working directory: " . getcwd());
+        $cwd = getcwd();
+        $bookFile = $cwd . "/" . $this->argument("bookFile");
+        $outputPath = $cwd . "/" . $this->argument("outputPath");
+
+        $this->line("Current working directory: " . $cwd);
+        $this->line("Book file: " . $bookFile);
+        $this->line("Output path: " . $outputPath);
+
+        $this->transformBook(
+            $bookFile,
+            $outputPath
+        );
+
+    }
+
+    protected function transformBook(string $bookFile, string $outputPath) {
+
+        $this->fb2Extractor->process($bookFile, $outputPath);
 
     }
 
