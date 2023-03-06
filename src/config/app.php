@@ -19,6 +19,7 @@ return [
     'providers' => [
 
         \App\ServiceProviders\CommandsServiceProviders::class,
+        \App\ServiceProviders\ClientsServiceProvider::class,
 
         /*
          * Crossbow service providers

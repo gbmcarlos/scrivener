@@ -8,9 +8,13 @@
         "illuminate/redis": "^7.0",
         "phpunit/phpunit": "^8.5",
         "predis/predis": "^1.1",
+        "orhanerday/open-ai": "^4.6",
         "ext-soap": "*",
         "ext-json": "*",
-        "ext-pcntl": "*"
+        "ext-pcntl": "*",
+        "ext-simplexml": "*",
+        "ext-xmlwriter": "*",
+        "ext-dom": "*"
     },
     "autoload": {
         "psr-4": {
