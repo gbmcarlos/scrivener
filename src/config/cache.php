@@ -1,19 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gbmcarlos
- * Date: 7/17/18
- * Time: 3:47 PM
- */
 
 return [
     'default' => env('CACHE_DRIVER', 'file'),
     'stores' => [
         'file' => [
-            'driver' => 'file',
-            'path' => storage_path('cache')
+            'driver' => 'array',
+            'path' => storage_path('framework/cache/data')
         ],
         'redis' => [
+            'client' => 'predis',
             'driver' => 'redis',
             'connection' => 'redis'
         ]

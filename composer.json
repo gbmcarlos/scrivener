@@ -1,13 +1,9 @@
 {
-    "name": "ekar/gondola",
+    "name": "gbmcarlos/strivener",
     "require": {
         "php": "7.4.*",
-        "laravel/lumen-framework": "^7.0",
-        "vlucas/phpdotenv": "^4.1",
+        "laravel/framework": "^7.0",
         "guzzlehttp/guzzle": "^6.5",
-        "illuminate/redis": "^7.0",
-        "phpunit/phpunit": "^8.5",
-        "predis/predis": "^1.1",
         "orhanerday/open-ai": "^4.6",
         "ext-soap": "*",
         "ext-json": "*",

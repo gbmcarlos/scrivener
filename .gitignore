@@ -6,3 +6,6 @@ src/bootstrap/cache/*.php
 src/.env*
 !src/.env.example
 src/.phpunit.result.cache
+node_modules
+src/public/js
+src/public/css
